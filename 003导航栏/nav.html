@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>导航栏</title>
+<link type='text/css' href='nav.css' rel='stylesheet' />
+</head>
+<body>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+
+<h2>全屏幕导航 - 从上到下动画</h2>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeLeftNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<div id="main">
+  <h2>侧边栏实例 - 页面主体向右移动</h2>
+  <p>点击以下菜单图标打开侧边栏，主体内容向右偏移。主体内容添加黑色透明背景</p>
+  <span style="font-size:30px;cursor:pointer" onclick="openLeftNav()">&#9776; 侧导航</span>
+</div>
+
+<h2>Snackbar / Toast</h2>
+<button onclick="myFunction()">显示 Snackbar</button>
+
+<div id="snackbar">一些文本..</div>
+</body>
+<script>
+function openNav() {
+    document.getElementById("myNav").style.height = "80%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+function openLeftNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeLeftNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+function myFunction() {
+    var x = document.getElementById("snackbar")
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
+</html>
