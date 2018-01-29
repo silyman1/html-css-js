@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>测试幻灯片</title>
+<link type='text/css' href='slide_test.css' rel='stylesheet' />
+</head>
+<body>
+<div class ="slide-container">
+	<div class="stopslide" id="flag" onclick="stopSlides(t)">stop</div>
+	<div class="slideshow fade" id ='sf'>
+		<div class="number-show">1/4</div>
+		<img src="1.jpg" style="width:100%">
+		<div class="article-detail">lallallal</div>
+	</div>
+	<div class="slideshow fade" id ='sf'>
+		<div class="number-show">2/4</div>
+		<img src="2.jpg" style="width:100%">
+		<div class="article-detail">eeeeee</div>
+	</div>
+	<div class="slideshow fade" id ='sf'>
+		<div class="number-show">3/4</div>
+		<img src="3.jpg" style="width:100%">
+		<div class="article-detail">dddddd</div>
+	</div>
+	<div class="slideshow fade" id ='sf'>
+		<div class="number-show">4/4</div>
+		<img src="4.jpg" style="width:100%">
+		<div class="article-detail">gggggg</div>
+	</div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="jumpTo(1)"></span> 
+  <span class="dot" onclick="jumpTo(2)"></span> 
+  <span class="dot" onclick="jumpTo(3)"></span>
+  <span class="dot" onclick="jumpTo(4)"></span> 
+</div>
+<script src="slide_test.js"></script>
+</body>
+</html>
